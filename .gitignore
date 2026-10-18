@@ -1,0 +1,53 @@
+.venv
+.streamlit/secrets.toml
+
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.airflow/
+.airflow3/
+*.egg-info/
+
+.claude/
+.mcp.json
+skills-lock.json
+CLAUDE.md
+
+.agents
+
+# Full dataset — keep only committed sample files under data/raw/
+data/raw/**/*
+!data/raw/training_setA/
+!data/raw/training_setA/p000001.psv
+!data/raw/training_setA/p000003.psv
+!data/raw/training_setB/
+!data/raw/training_setB/p100001.psv
+!data/raw/README.md
+
+# Local data and generated artifacts
+data/processed/
+data/incoming/**
+data/bronze/**
+data/silver/**
+data/gold/**
+data/quarantine/**
+data/registry/**
+artifacts/models/**
+artifacts/runs/**
+
+# Keep directory instructions/placeholders
+!**/.gitkeep
+!data/incoming/README.md
+!artifacts/models/README.md
+!artifacts/models/v1/
+!artifacts/models/v1/model.json
+!artifacts/models/v1/preprocessor.json
+!artifacts/models/v1/feature_config.json
+
+# Original Sepsyd model (kept only as the legacy conversion source)
+vendor/sepsyd_original/*.pickle.dat
+
+# Prediction logs (runtime)
+logs/*.jsonl
+logs/predictions/*.jsonl
